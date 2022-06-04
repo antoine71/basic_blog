@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-APPS_DIR = BASE_DIR / "antoine_blog"
+APPS_DIR = BASE_DIR / "basic_blog"
 
 
 # GENERAL
@@ -58,7 +58,7 @@ THIRD_PARTY_APPS = [
     'markdownx',
 ]
 LOCAL_APPS = [
-    'antoine_blog.blog.apps.BlogConfig',
+    'basic_blog.blog.apps.BlogConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

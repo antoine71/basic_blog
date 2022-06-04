@@ -21,7 +21,7 @@ from basic_blog.blog.views import index
 
 urlpatterns = [
     path("", index, name="home"),
-    path("blog/", include("antoine_blog.blog.urls", namespace="blog")),
+    path("blog/", include("basic_blog.blog.urls", namespace="blog")),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     path("contact", TemplateView.as_view(template_name="pages/contact.html"), name="contact"),
     path(settings.ADMIN_URL, admin.site.urls),
