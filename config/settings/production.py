@@ -18,7 +18,7 @@ ALLOWED_HOSTS = ['arebillard.fr', 'www.arebillard.fr', '51.77.159.144']
 
 # STATIC
 # ------------------------
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # SECURITY
