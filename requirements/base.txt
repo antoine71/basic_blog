@@ -1,0 +1,12 @@
+# Django
+# ------------------------------------------------------------------------------
+django==4.0.5  # https://www.djangoproject.com/
+django-autoslug==1.9.8 # https://django-autoslug.readthedocs.io/
+psycopg2-binary==2.9.3  # https://github.com/psycopg/psycopg2
+django_non_dark_admin==2.0.2 # https://pypi.org/project/django-non-dark-admin/
+django-environ==0.8.1 # https://django-environ.readthedocs.io/
+
+# Markdown
+# ------------------------------------------------------------------------------
+markdown==3.3.7 # https://python-markdown.github.io
+django-markdownx==4.0.0b1 # https://pypi.org/project/django-markdownx/

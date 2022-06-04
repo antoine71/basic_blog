@@ -1,0 +1,6 @@
+-r base.txt
+
+# Deployment
+# ------------------------------------------------------------------------------
+gunicorn==20.2.0 # https://docs.gunicorn.org/en/latest/index.html
+
