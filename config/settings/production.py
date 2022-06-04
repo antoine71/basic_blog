@@ -1,7 +1,13 @@
 import os
 
+import environ
+
 from .base import *
 
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -16,19 +22,6 @@ ALLOWED_HOSTS = ['www.arebillard.fr', '51.77.159.144']
 # ------------------------
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# DATABASES
-# ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DATABASE_NAME'],
-        'USER': os.environ['DATABASE_USER'],
-        'PASSWORD': os.environ['DATABASE_PASSWORD'],
-        'HOST': os.environ['DATABASE_HOST'],
-        'PORT': os.environ['DATABASE_PORT'],
-    }
-}
 
 # SECURITY
 # ------------------------------------------------------------------------------
@@ -78,4 +71,4 @@ LOGGING = {
 }
 
 # Django Admin URL regex.
-ADMIN_URL = os.environ['ADMIN_URL']
+ADMIN_URL = env('ADMIN_URL')
