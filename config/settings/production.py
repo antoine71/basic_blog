@@ -78,4 +78,4 @@ LOGGING = {
 }
 
 # Django Admin URL regex.
-ADMIN_URL = os.environ['DJANGO_ADMIN_URL']
+ADMIN_URL = os.environ['ADMIN_URL']
