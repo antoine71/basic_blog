@@ -14,7 +14,7 @@ environ.Env.read_env()
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 DEBUG = False
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = env('SECRET_KEY')
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['www.arebillard.fr', '51.77.159.144']
 
