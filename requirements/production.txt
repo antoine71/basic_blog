@@ -2,5 +2,5 @@
 
 # Deployment
 # ------------------------------------------------------------------------------
-gunicorn==20.2.0 # https://docs.gunicorn.org/en/latest/index.html
+gunicorn==20.1.0 # https://docs.gunicorn.org/en/latest/index.html
 
