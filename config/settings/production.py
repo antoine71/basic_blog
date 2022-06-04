@@ -14,7 +14,7 @@ DEBUG = False
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env('SECRET_KEY')
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['www.arebillard.fr', '51.77.159.144']
+ALLOWED_HOSTS = ['arebillard.fr', 'www.arebillard.fr', '51.77.159.144']
 
 # STATIC
 # ------------------------
@@ -24,13 +24,13 @@ ALLOWED_HOSTS = ['www.arebillard.fr', '51.77.159.144']
 # SECURITY
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#secure-ssl-redirect
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 # # https://docs.djangoproject.com/en/dev/ref/settings/#secure-proxy-ssl-header
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # # https://docs.djangoproject.com/en/dev/ref/settings/#session-cookie-secure
-# SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # # https://docs.djangoproject.com/en/dev/ref/settings/#csrf-cookie-secure
-# CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # LOGGING
 # ------------------------------------------------------------------------------
