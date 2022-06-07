@@ -1,6 +1,5 @@
 from typing import Any, Sequence
 
-
 from factory import post_generation, SubFactory, Faker
 from factory.django import DjangoModelFactory
 
