@@ -9,7 +9,10 @@ def index(request):
     articles = Article.objects.all().order_by('-date_created')
     
     paginator = Paginator(articles, 5)
-    page_number = request.GET.get('page')
+    try:
+        page_number = request.GET.get('page')
+    except AttributeError:
+        page_number = 1
     page_obj = paginator.get_page(page_number)
     
     context = {
