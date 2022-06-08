@@ -41,11 +41,11 @@ sudo service postgresql start
 3 in the subfolder `settings`, create a file names `.env` and populate the following environment variables information :
 
 ```shell
-touch settings/.env
+touch config/settings/.env
 ```
 
 ```
-# settings/.env
+# config/settings/.env
 
 SECRET_KEY=<your local secretkey>
 DATABASE_NAME=<your database namey>
