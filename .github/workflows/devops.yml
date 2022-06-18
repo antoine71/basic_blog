@@ -1,5 +1,7 @@
 name: Python application test with Github Actions
 
+on: [push]
+
 env:
 	SECRET_KEY: secret
   DATABASE_NAME: antoine_blog_db
@@ -9,7 +11,6 @@ env:
 	DATABASE_PORT: 5432
 	ADMIN_URL: admin/
 
-on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
