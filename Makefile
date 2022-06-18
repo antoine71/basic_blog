@@ -6,7 +6,7 @@ format:
 	#format code
 	black .
 lint:
-	flake 8
+	flake8
 test:
 	#test
 deploy:
