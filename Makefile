@@ -3,8 +3,8 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements/local.txt
 	sudo service postgresql start
-	sudo createdb antoine_blog_db
-	sudo createuser db_admin --createdb
+	su - postgres -c 'createdb antoine_blog_db'
+	su - postgres -c 'createuser db_admin --createdb'
 	export SECRET_KEY=dscvx4342*&(ˆ(trerew0&dsassg7v=g80ews#z&e
 	export DATABASE_NAME=antoine_blog_db
 	export DATABASE_USER=db_admin
