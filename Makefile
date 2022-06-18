@@ -2,6 +2,7 @@ install:
 	#install commands
 	pip install --upgrade pip &&\
 		pip install -r requirements/local.txt
+	sudo services postgresql start
 	createdb antoine_blog_db
 	createuser db_admin --createdb
 	export SECRET_KEY=dscvx4342*&(ˆ(trerew0&dsassg7v=g80ews#z&e
