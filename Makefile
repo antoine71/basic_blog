@@ -5,7 +5,7 @@ install:
 	sudo su - postgres -c 'createuser db_admin --createdb'
 	pip install --upgrade pip &&\
 		pip install -r requirements/local.txt	
-	export SECRET_KEY=dscvx4342*&(ˆ(trerew0&dsassg7v=g80ews#z&e
+	export SECRET_KEY=secret
 	export DATABASE_NAME=antoine_blog_db
 	export DATABASE_USER=db_admin
 	export DATABASE_PASSWORD=
