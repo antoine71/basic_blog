@@ -21,7 +21,7 @@ lint:
 	flake8
 test:
 	#test
-	pytest --cov=basic_blog -v
+	pytest --cov=basic_blog -vv
 deploy:
 	#deploy
 all: install lint test deploy
