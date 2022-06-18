@@ -9,6 +9,7 @@ lint:
 	flake8
 test:
 	#test
+	pytest --cov=basic_blog -v
 deploy:
 	#deploy
 all: install lint test deploy
