@@ -12,9 +12,9 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Lint with pylint
+    - name: Lint with flake8
       run: |
-        #make lint
+        make lint
     - name: Test with pytest
       run: |
         #make test
