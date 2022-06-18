@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/antoine71/basic_blog/actions/workflows/devops.yml/badge.svg)](https://github.com/antoine71/basic_blog/actions/workflows/devops.yml)
+
 # Basic blog
 
 This project is a basic blog website built on a Django backend.
