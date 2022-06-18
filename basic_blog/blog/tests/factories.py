@@ -10,10 +10,10 @@ from ..models import Article
 
 class UserFactory(DjangoModelFactory):
 
-    username = Faker('user_name')
-    email = Faker('email')
-    first_name = Faker('first_name')
-    last_name = Faker('last_name')
+    username = Faker("user_name")
+    email = Faker("email")
+    first_name = Faker("first_name")
+    last_name = Faker("last_name")
 
     @post_generation
     def password(self, create: bool, extracted: Sequence[Any], **kwargs):
@@ -37,11 +37,10 @@ class UserFactory(DjangoModelFactory):
 
 
 class ArticleFactory(DjangoModelFactory):
-
     class Meta:
         model = Article
 
-    title = Faker('text', max_nb_chars=255)
-    abstract = Faker('text', max_nb_chars=512)
-    content = Faker('text', max_nb_chars=512)
+    title = Faker("text", max_nb_chars=255)
+    abstract = Faker("text", max_nb_chars=512)
+    content = Faker("text", max_nb_chars=512)
     author = SubFactory(UserFactory)
