@@ -6,7 +6,7 @@ env:
   SECRET_KEY: secret
   DATABASE_NAME: antoine_blog_db
   DATABASE_USER: db_admin
-  DATABASE_PASSWORD:
+  DATABASE_PASSWORD: ''
   DATABASE_HOST: localhost
   DATABASE_PORT: 5432
   ADMIN_URL: admin/
