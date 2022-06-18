@@ -2,7 +2,9 @@ install:
 	#install commands
 	pip install --upgrade pip &&\
 		pip install -r requirements/local.txt
-format 
+format:
+	#format code
+	black .
 lint:
 	#flake 8
 test:
