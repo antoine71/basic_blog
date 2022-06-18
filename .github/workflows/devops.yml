@@ -2,18 +2,19 @@ name: Python application test with Github Actions
 
 on: [push]
 
-env:
-  SECRET_KEY: secret
-  DATABASE_NAME: antoine_blog_db
-  DATABASE_USER: db_admin
-  DATABASE_PASSWORD: ''
-  DATABASE_HOST: localhost
-  DATABASE_PORT: 5432
-  ADMIN_URL: admin/
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+    env:
+      # postgres://user:password@host:port/database
+      DATABASE_URL: "postgres://postgres:postgres@localhost:5432/postgres"
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
