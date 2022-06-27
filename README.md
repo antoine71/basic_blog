@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/antoine71/basic_blog/actions/workflows/devops.yml/badge.svg)](https://github.com/antoine71/basic_blog/actions/workflows/devops.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Basic blog
 
 This project is a basic blog website built on a Django backend.

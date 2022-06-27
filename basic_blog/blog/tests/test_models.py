@@ -8,6 +8,6 @@ pytestmark = pytest.mark.django_db
 
 def test_article():
     article = factories.ArticleFactory(
-        title='my article title',
+        title="my article title",
     )
-    assert str(article) == 'my article title'
+    assert str(article) == "my article title"
