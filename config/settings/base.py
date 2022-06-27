@@ -78,11 +78,6 @@ DATABASES = {
         "PORT": env("DATABASE_PORT"),
     }
 }
-DATABASES = {
-    "default": env.db(
-        "DATABASE_URL",
-    ),
-}
 
 
 # PASSWORDS
