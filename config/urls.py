@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from basic_blog.blog.views import index
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("", index, name="home"),
@@ -32,4 +33,4 @@ urlpatterns = [
     ),
     path(settings.ADMIN_URL, admin.site.urls),
     path("markdownx/", include("markdownx.urls")),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

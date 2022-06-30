@@ -2,41 +2,41 @@
 {% load static %}
 
 {% block content %}
-
-
-<div class="container px-4 px-lg-5">
+  <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-            <!-- Post preview-->
-            {% if page_obj %}
-            {% for article in page_obj %}
-
-
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <!-- Post preview-->
+        {% if page_obj %}
+          {% for article in page_obj %}
             <div class="post-preview">
-                <a href="{% url 'blog:article' slug=article.slug %}">
-                    <h2 class="post-title">{{ article.title }}</h2>
-                    <h3 class="post-subtitle">{{ article.abstract }}</h3>
-                </a>
-                <p class="post-meta">
-                    Publié par
-                    <a href="#!">{{ article.author.first_name }} {{ article.author.last_name }}</a>
-                    le {{ article.date_created | date:"j F Y" }}
-                </p>
+              {% if article.image %}<img src="{{ article.image.url }}" alt="" class="img-fluid" style="max-width: 300px;">{% endif %}
+              <a href="{% url 'blog:article' slug=article.slug %}">
+                <h2 class="post-title">{{ article.title }}</h2>
+                <h3 class="post-subtitle">{{ article.abstract }}</h3>
+              </a>
+              <p class="post-meta">
+                Publié par
+                <a href="#!">{{ article.author.first_name }} {{ article.author.last_name }}</a>
+                le {{ article.date_created | date:"j F Y" }}
+              </p>
             </div>
             <!-- Divider-->
             <hr class="my-4" />
-
-            {% endfor %}
-            {% endif %}
-            <!-- Pager-->
-            {% if page_obj.has_next %}
-            <div class="d-flex justify-content-end mb-4"><a href="?page={{ page_obj.next_page_number }}"><div class="btn btn-primary text-uppercase">Articles suivants</div></a></div>
-        
-            {% else %}
-            <div class="d-flex justify-content-end mb-4"><div class="btn btn-primary text-uppercase">Fin des articles</div></div>
-            {% endif %}
-        </div>
+          {% endfor %}
+        {% endif %}
+        <!-- Pager-->
+        {% if page_obj.has_next %}
+          <div class="d-flex justify-content-end mb-4">
+            <a href="?page={{ page_obj.next_page_number }}">
+              <div class="btn btn-primary text-uppercase">Articles suivants</div>
+            </a>
+          </div>
+        {% else %}
+          <div class="d-flex justify-content-end mb-4">
+            <div class="btn btn-primary text-uppercase">Fin des articles</div>
+          </div>
+        {% endif %}
+      </div>
     </div>
-</div>
-
+  </div>
 {% endblock %}

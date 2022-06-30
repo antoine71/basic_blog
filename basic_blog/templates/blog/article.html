@@ -1,23 +1,34 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load markdown_extras %}
-
+{% block description %}
+  {{ article.abstract }}
+{% endblock description %}
+{% block title %}
+  {{ article.title }}
+{% endblock title %}
+{% block opengraph_tags %}
+  <meta property="og:title" content="{{ article.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url"
+        content="{{ request.build_absolute_uri }}"/>
+  <meta property="og:image" content="{{ image_absolute_url }}" />
+  <meta property="og:site_name" content="Django Facile" />
+{% endblock opengraph_tags %}
 {% block content %}
-
-<article class="mb-4">
+  <article class="mb-4">
     <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="post-preview">
-                    <h2 class="post-title">{{ article.title }}</h2>
-                    <p class="post-meta">
-                        Publié par {{ article.author.first_name }} {{ article.author.last_name }} le {{ article.date_created | date:"j F Y" }}
-                    </p>
-                </div>
-                {{ article.content | markdown | safe }}
-            </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="post-preview">
+            <h2 class="post-title">{{ article.title }}</h2>
+            <p class="post-meta">
+              Publié par {{ article.author.first_name }} {{ article.author.last_name }} le {{ article.date_created | date:"j F Y" }}
+            </p>
+          </div>
+          {{ article.content | markdown | safe }}
         </div>
+      </div>
     </div>
-</article>
-
+  </article>
 {% endblock content %}
