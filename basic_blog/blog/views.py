@@ -24,6 +24,9 @@ def index(request):
 
 def article(request, slug):
     article = Article.objects.get(slug=slug)
-    image_absolute_url = request.build_absolute_uri(article.image.url)
+    if article.image:
+        image_absolute_url = request.build_absolute_uri(article.image.url)
+    else:
+        image_absolute_url = request.build_absolute_uri('static/assets/img/django.png')
     context = {"article": article, "image_absolute_url": image_absolute_url}
     return render(request, "blog/article.html", context)
